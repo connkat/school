@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=SecondsConverterTest
+comment0.text=\n\ The\ test\ class\ SecondsConverterTest.\n\n
+comment1.params=
+comment1.target=SecondsConverterTest()
+comment1.text=\n\ Default\ constructor\ for\ test\ class\ SecondsConverterTest\n
+comment2.params=
+comment2.target=void\ testSecondsConversionWithValue0()
+comment3.params=
+comment3.target=void\ testSecondsConversionWithValue1()
+comment4.params=
+comment4.target=void\ testSecondsConversionWithValue60()
+comment5.params=
+comment5.target=void\ testSecondsConversionWithValue3600()
+comment6.params=
+comment6.target=void\ testSecondsConversionWithValue3661()
+comment7.params=
+comment7.target=void\ testSecondsConversionWithValue9999()
+numComments=8

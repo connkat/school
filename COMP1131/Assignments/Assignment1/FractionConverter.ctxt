@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=FractionConverter
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=fractionPrompt
+comment2.target=int\ askQuestion(java.lang.String)
+comment3.params=numerator\ denominator
+comment3.target=double\ convert(int,\ int)
+numComments=4

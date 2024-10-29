@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=SecondsConverter
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=int\ askQuestion()
+comment3.params=totalSeconds
+comment3.target=java.util.List\ convert(int)
+numComments=4
