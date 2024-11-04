@@ -17,27 +17,28 @@
 
 import java.util.Scanner; //imports scanner for reading responses
 import java.util.Random; //imports random class
-import java.util.Optional;
 
 public class NumberGame
 {
+    static boolean isActive = true;
+    static int gameNum = 0;
     
     public static void main(String[] args)
     {
-        boolean isActive = true;
-        
-           int[] newGame = startGame();
+            int[] newGame = startGame();
             
             int guess = newGame[0];
             int count = newGame[1];
-            int gameNum = newGame[2];
+            NumberGame.gameNum = newGame[2];
         
-        while (isActive){
+        while (isActive) {
             Object response = askQuestion(count);
             
             if (response.equals("quit"))
                 {
-                    isActive = gameOver(count, false);
+                     System.out.println("Goodbye");
+                        isActive = false;
+                        break;
                 }
             
             boolean isValidNum = validate(response);
@@ -50,12 +51,22 @@ public class NumberGame
                 guess = Integer.parseInt((String) response); 
         
                 if (guess == gameNum) 
-                {
-                    isActive = false;
-                    break;
-                }
+                    {
+                        response = gameOver(count);
+                        
+                        if (response.equals("y"))
+                        {
+                            startGame();
+                        }
+                        else
+                        {
+                            System.out.println("Goodbye");
+                            isActive = false;
+                            break;
+                        }
+                    }
                 
-                else if (guess >= 50 || guess <= -50)
+                else if (guess >= 51 || guess <= -51)
                 {
                     System.out.println("Please give a whole value between -50 and +50");
                 }
@@ -63,17 +74,20 @@ public class NumberGame
                 else 
                 {
                     System.out.println("Not quite, please guess again");
+                    
+                    if (guess <= gameNum) {
+                       System.out.println("Your guess is to the LEFT of the number."); 
+                    }
+                    
+                    if (guess >= gameNum) {
+                       System.out.println("Your guess is to the RIGHT of the number."); 
+                    }
                     count ++;
                 }
             }
             
         }
         
-            if (guess == gameNum)
-            isActive = gameOver(count, true);
-            if (isActive) {
-    
-            }
     }
     
     /**
@@ -108,31 +122,25 @@ public class NumberGame
      * @param     win boolean
      * @return    void
      */ 
-    private static boolean gameOver(int count, boolean win) 
+    private static String gameOver(int count) 
     {
         String result;
+            
+        System.out.println("__     ______  _    _    __        __     ");
+        System.out.println("\\ \\   / / __ \\| |  | |   \\ \\      / (_)    ");
+        System.out.println(" \\ \\_/ / |  | | |  | |    \\ \\ /\\ / / _   _ __");
+        System.out.println("  \\   /| |  | | |  | |     \\ V  V / | | / `_ \\ ");
+        System.out.println("   | | | |__| | |__| |      \\_/\\_/  | | | | | |");
+        System.out.println("   |_|  \\____/ \\____/               |_| |_| |_|");
         
-        if (win == true)
-            result = "won";
-        else
-            result = "lost";
-        
-        System.out.println("Game Over! You have " + result + " the game.");
         System.out.println("The game was completed in " + count + " rounds.");
         
-        System.out.println("Would you like to play again? y/n");
+        System.out.println("Would you like to play again?");
+        System.out.println("press y to start new game or any other character to exit");
         Scanner scanner = new Scanner(System.in); // instantiates the scanner class
         String response = scanner.nextLine();
         
-        if (response.equals("y"))
-            {
-                return true;
-            }
-        else 
-            {
-                System.out.println("Goodbye");
-                return false;
-            }
+        return response;
         }
     
     
@@ -145,10 +153,9 @@ public class NumberGame
     private static int[] startGame() 
     {
        Random random = new Random(); // instantiates the Random class
-        int gameNum = random.nextInt(101) - 50; // generates a random number between -50 and +50
+        gameNum = random.nextInt(101) - 50; // generates a random number between -50 and +50
         
-        System.out.println("THE NUM IS:" + gameNum);
-        System.out.println("Welcome! Guess a number between -50 and +50 (or type 'quit' to exit)");
+        System.out.println("Welcome! Guess a number between -50 and +50 (or type 'quit' to exit.)");
 
         int guess = 0;
         int count = 1;

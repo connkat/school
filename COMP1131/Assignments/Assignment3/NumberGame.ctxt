@@ -1,14 +1,14 @@
 #BlueJ class context
 comment0.target=NumberGame
-comment1.params=
-comment1.target=void\ main()
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
 comment2.params=count
 comment2.target=java.lang.Object\ askQuestion(int)
 comment2.text=\n\n\ @return\ \ \ \ response\ of\ question\n
 comment3.params=response
 comment3.target=boolean\ validate(java.lang.Object)
-comment4.params=count\ win
-comment4.target=boolean\ gameOver(int,\ boolean)
+comment4.params=count
+comment4.target=java.lang.String\ gameOver(int)
 comment4.text=\n\n\ @param\ \ \ \ \ count\ \ int\n\ @param\ \ \ \ \ win\ boolean\n\ @return\ \ \ \ void\n
 comment5.params=
 comment5.target=int[]\ startGame()
