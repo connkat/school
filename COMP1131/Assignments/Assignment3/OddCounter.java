@@ -15,6 +15,13 @@ import java.util.Scanner; //imports scanner for reading responses
 
 public class OddCounter
 {
+    static boolean isActive = false;
+    static int countOne = 0;
+    static int countThree = 0;
+    static int countFive = 0;
+    static int countSeven = 0;
+    static int countNine = 0;
+    static int countOther = 0;
 
     /**
      * An example of a method - replace this comment with your own
@@ -22,20 +29,78 @@ public class OddCounter
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public static void main(String[] args)
-    {
-        String response = askQuestion();
+    public static void main(String[] args)    
+    {   
         
-        for (char 
-        
+        do
+        {
+            String response = start(); 
+            
+            for (int i = 0; i < response.length(); i++) 
+            {
+                char currentChar = response.charAt(i);
+                
+                switch (currentChar)
+              {
+                case '1':
+                    countOne++;
+                    break;
+                case '3':
+                   countThree++;
+                   break;
+                case '5':
+                    countFive++;
+                    break;
+                case '7':
+                    countSeven++;
+                    break;
+                case '9':
+                    countNine++;
+                    break;
+                
+                default:
+                   countOther++;
+                   break;         
+                    }
+            
+            }
+            
+            System.out.printf("The results are:\n 1: %d\n 3: %d\n 5: %d\n 7: %d\n 9: %d\n other: %d \n", 
+                countOne, countThree, countFive, countSeven, countNine, countOther);
+            
+            String newGame = askQuestion("Enter y to play again, or anything else to exit the game.");
+            
+            if (newGame.equals("y")) {
+                OddCounter.isActive = true;
+            }
+            else 
+            {
+                OddCounter.isActive = false;
+                System.out.println("Goodbye");
+                break;
+            }
+        }while (isActive = true);
     }
     
-     private static String askQuestion() 
+     private static String askQuestion(String question) 
     {
+        System.out.println(question);
         Scanner scanner = new Scanner(System.in); // instantiates the scanner class
-        
-        System.out.print("Plz feed me text, I need numbers to survive."); // asks question given as arg
         String response = scanner.nextLine(); // assigns response to a variable
+        
+        return response;
+    }
+    
+     private static String start() 
+    {        
+        String response = askQuestion("Plz feed me text, I need numbers to survive.");
+        
+        OddCounter.countOne = 0;
+        OddCounter.countThree = 0;
+        OddCounter.countFive = 0;
+        OddCounter.countSeven = 0;
+        OddCounter.countNine = 0;
+        OddCounter.countOther = 0;
         
         return response;
     }
