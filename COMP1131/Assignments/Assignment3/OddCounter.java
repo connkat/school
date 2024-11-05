@@ -1,11 +1,8 @@
 
 /**
  * An application that repeatedly reads some text from the user, then determines and displays how many of each of the 
- * odd digits (i.e., 1, 3, 5, 7, and 9) appear in the entire text. 
- *
- * Have a separate counter for each digit. Also count and print the number of all other characters.
- * The logic must include a switch-case structure to determine which counter to increment. 
- * After the results for an input are displayed, prompt the user if they want to do another input.
+ * odd digits (1, 3, 5, 7, and 9) and how many other characters appear in the entire text.
+ * After the results for an input are displayed, it prompts the user if they want to do another input.
  *
  * @Kat Connolly (@connkat)
  * @v1.0
@@ -15,6 +12,7 @@ import java.util.Scanner; //imports scanner for reading responses
 
 public class OddCounter
 {
+    // setting all initial values, accessible to any functions in this class: 
     static boolean isActive = false;
     static int countOne = 0;
     static int countThree = 0;
@@ -23,25 +21,18 @@ public class OddCounter
     static int countNine = 0;
     static int countOther = 0;
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
     public static void main(String[] args)    
     {   
         
-        do
+        do //while the game status isActive, this code will run and/or re-run
         {
-            String response = start(); 
+            String response = startRound(); // calls the start method of being the game
             
-            for (int i = 0; i < response.length(); i++) 
-            {
-                char currentChar = response.charAt(i);
+            for (int i = 0; i < response.length(); i++) { //loops through every character entered by the user and checks for value
+                char currentChar = response.charAt(i); //sets the value of the current index to a temp variable
                 
-                switch (currentChar)
-              {
+                // each case checks the value of the current looped index against the count values and adds to each count if true.
+                switch (currentChar) {
                 case '1':
                     countOne++;
                     break;
@@ -57,32 +48,39 @@ public class OddCounter
                 case '9':
                     countNine++;
                     break;
-                
+                // if none of the counter values match, it adds the count to the other character count. 
                 default:
                    countOther++;
                    break;         
-                    }
-            
+                }
             }
             
+            // Prints out the result of the odd counter
             System.out.printf("The results are:\n 1: %d\n 3: %d\n 5: %d\n 7: %d\n 9: %d\n other: %d \n", 
                 countOne, countThree, countFive, countSeven, countNine, countOther);
             
+            // Prompts user to start a new game
             String newGame = askQuestion("Enter y to play again, or anything else to exit the game.");
             
+            // handles the response of the user to either start a new round or exit the the game.
             if (newGame.equals("y")) {
                 OddCounter.isActive = true;
-            }
-            else 
-            {
+            } else {
                 OddCounter.isActive = false;
                 System.out.println("Goodbye");
                 break;
             }
-        }while (isActive = true);
+        } while (isActive = true);
     }
     
-     private static String askQuestion(String question) 
+    /**
+     * askQuestion:
+     * Asks a question (param question) to the user and returns the reponse given back to main
+     *
+     * @param:    String question
+     * @return    String respose
+     */
+    private static String askQuestion(String question) 
     {
         System.out.println(question);
         Scanner scanner = new Scanner(System.in); // instantiates the scanner class
@@ -91,10 +89,19 @@ public class OddCounter
         return response;
     }
     
-     private static String start() 
+     
+    /**
+     * startRound:
+     * Sends the prompt message to the user and sets/resets all of the count values to 0. 
+     * Returns the user response to main.
+     *
+     * @return    String respose
+     */
+    private static String startRound() 
     {        
-        String response = askQuestion("Plz feed me text, I need numbers to survive.");
+        String response = askQuestion("Plz feed me text, I need numbers to survive:"); //asks for input
         
+        // sets all the values to 0 at the start of a new round
         OddCounter.countOne = 0;
         OddCounter.countThree = 0;
         OddCounter.countFive = 0;
