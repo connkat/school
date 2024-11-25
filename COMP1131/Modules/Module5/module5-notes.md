@@ -305,3 +305,50 @@ should also assess the way the system is decomposed into classes and objects.
 - Because the goal of testing is to find errors, it is often referred to as `defect testing`.
 - With that goal in mind, a good test is one that uncovers any deficiencies in a program. This might seem strange, because we ultimately don’t want to have problems in our system. But keep in mind that errors almost certainly exist.
 - A test case is a set of inputs, user actions, or other initial conditions, and the expected output. A test case should be appropriately documented so that it can be repeated later as needed. Developers often create a complete test suite, which is a set of test cases that covers various aspects of the system.
+- `black-box testing`: test cases are developed without regard to the internal workings. Black-box tests are based on inputs and outputs. An entire program can be tested using a black-box technique, in which case the inputs are the user-provided information and user actions such as button pushes.
+- `Equivalence category`:  a collection of inputs that are expected to produce similar outputs. The input data for a black-box test case are often selected by defining equivalence categories. 
+	- Equivalence categories have defined boundaries. Because all values of an equivalence category essentially test the same features of a program, only one test case
+	inside the equivalence boundary is needed. 
+-  For an integer boundary, a good test suite would include at least the exact value of the boundary, the boundary minus 1, and the boundary plus 1. Test cases that use these cases, plus at least one from within the general field of the category, should be defined.
+- `White-box testing`: exercises the internal structure and implementation of a method. A white-box test case is based on the logic of the code. 
+	-  A white-box test maps the possible paths through the code and ensures that the test cases cause every path to be executed. This type of testing is often called statement coverage.
+- `Unit testing`: creates a test case for each module of code (method) that has been authored. The goal of unit testing is to ensure correctness of the methods (units), one method at a time.
+
+### Integration Testing
+- During integration testing, modules that were individually tested during unit test-
+ing are now tested as a collection. 
+- Typically, the goal of integration testing is to examine the correctness of large components of a system.
+
+### System Testing
+- System testing seeks to test the entire software system and how its implementation adheres to its requirements. 
+- You may be familiar with public alpha or beta testing of applications or operating systems. Alpha and beta tests are system tests applied before the formal release and availability of a software product.
+
+### Test-Driven Development
+- Ideally, developers should be writing test cases concurrently with the development
+of the source code that their applications use.
+- The test-driven approach requires that developers periodically (during development and implementation) test their code using the implemented test cases. 
+- The steps include: 
+1. Create a test case that tests a specific method that has yet to be completed.
+2. Execute all of the test cases present, and verify that all test cases pass except for the most recently implemented test case.
+3. Develop the method that the test case targets so that the test case will pass without errors.
+4. Re-execute all of the test cases, and verify that every test case passes, including the most recently implemented test case.
+5. Clean up the code to eliminate any redundant portions introduced by the development of the most recent method. This step is known as refactoring the code.
+6. Repeat the process starting with Step 1.
+
+## Debugging
+-  Debugging is the act of locating and correcting run-time and logic errors in your programs.
+-  A debugger is a software application that allows us to observe these inner workings as the program executes. 
+- One of the most simplistic approaches to debugging involves the use of print-
+ing. That is, scattered throughout a program can be print and println statements that output various information either to the screen or to an output file.
+
+### Debugging Concepts
+- Debugging through printing can take us only so far. Most of the time, this style of debugging can be effectively used to identify what is happening during execution, or the value of a variable at a certain point in the program. 
+
+- A debugger allows us to do the following:
+	-Set one or more breakpoints in our program. In the debugger, we can examine the source code and set special flags or triggers on one or more lines of code. When execution of the program comes across a statement that has been flagged, execution stops.
+	- Print the value of a variable or object. Once we have reached a breakpoint and execution has stopped, the debugger allows us to display the value of a variable or examine the state of an object. Generally, these types of displays are to the screen and only within the confines of the debugger application.
+	- Step into or over a method. If we set a breakpoint at a statement that is a call to a method, when execution reaches this breakpoint and the program stops, the developer can choose to enter into the method and continue debugging or to step over the method, bypassing the display of the execution of the statements contained in the method. In stepping over the method, we should note that the method is still executed, but we have chosen not to delve into the method. Consider the call to the printing of a string of output to the screen. We probably don’t need to step into the println method of the System.out object. It’s likely to have been fully debugged already (and we can’t change its behavior anyway).
+	- Execute the next single statement. After reaching a breakpoint, the developer can choose to execute the next single statement (also known as a step). By executing a single step, we can literally control the execution of our program one statement at a time. Developers often perform stepping to be sure they understand the flow of execution and to give themselves an opportunity to display the value of a variable following each step, if desired.
+	- Continue execution. Once a program has stopped due to a breakpoint, or is waiting for the developers to decide whether they will step into, step over, or single step, the developers can also continue execution. Continuing execution will result in the program running each statement without pausing until the program ends, it encounters another breakpoint, or a run-time error occurs.
+
+
