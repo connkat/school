@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=ArrayOps
+comment0.text=\n\ A\ program\ to\ find\ the\ minimum\ value,\ maximum\ value,\ and\ average\ value\ and\ return\ their\ values\n\ as\ Strings\ given\ a\ double\ array.\n\n\ @connkat\ (Kat\ Connolly)\n\ @version\ v1.0\n
+comment1.params=size
+comment1.target=ArrayOps(int)
+comment1.text=\n\ Constructor\:\ Allocates\ and\ initializes\ the\ array\ with\ random\ values\n\ @param\ size\ The\ size\ of\ the\ array\n\ @return\ void\n
+comment2.params=
+comment2.target=double\ findMin()
+comment2.text=\n\ findMin\:\ Finds\ the\ minimum\ value\ in\ the\ array\n\n\ @return\ double\n
+comment3.params=
+comment3.target=double\ findMax()
+comment3.text=\n\ findMax\:\ Finds\ the\ maximuum\ value\ in\ the\ array\n\n\ @return\ double\n
+comment4.params=
+comment4.target=double\ findAvg()
+comment4.text=\n\ findAvg\:\ Finds\ the\ average\ value\ in\ the\ array\n\n\ @return\ double\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ Returns\ a\ string\ representation\ of\ the\ array\ values.\n\ @return\ String\ containing\ all\ array\ values\n
+numComments=6

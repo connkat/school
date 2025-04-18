@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=ArrayOpsDriver
+comment0.text=\n\ A\ Driver\ to\ test\ the\ ArrayOps\ class\ that\ prompts\ the\ user\ for\ an\ array\ size,\ then\ \n\ creates\ an\ ArrayOps\ object\ and\ displats\ the\ array\ conents\ and\ stats.\ \n\n\ @connkat\ (Kat\ Connolly)\n\ @version\ v1.0\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

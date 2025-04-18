@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=DominoSet
+comment0.text=\n\ A\ representation\ of\ a\ standard\ set\ of\ 28\ domino\ tiles\n\n\ @connkat\ (Kat\ Connolly)\n\ @version\ v1.0\n
+comment1.params=
+comment1.target=DominoSet()
+comment1.text=\n\ Constructs\ a\ complete\ set\ of\ dominoes.\n\ Uses\ nested\ loops\ to\ create\ tiles\ with\ all\ possible\ combinations\ (0,0)\ \n\ through\ (6,6).\n
+comment2.params=
+comment2.target=void\ shuffle()
+comment2.text=\n\ Shuffles\ the\ domino\ set\ by\ randomly\ swapping\ pairs\ of\ tiles.\n\n\ @return\ void\n
+comment3.params=
+comment3.target=int\ getTilesLeft()
+comment3.text=\n\ Returns\ the\ number\ of\ tiles\ left\ in\ the\ set.\n\n\ @return\ int\ The\ number\ of\ tiles\ left\n
+comment4.params=
+comment4.target=Domino\ deal()
+comment4.text=\n\ Deals\ a\ tile\ from\ the\ set\ (removes\ it\ from\ the\ available\ tiles).\n\n\ @return\ Domino\ The\ dealt\ domino,\ or\ none\ if\ no\ dominos\ are\ left\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ Returns\ a\ string\ representation\ of\ all\ dominoes\ currently\ in\ the\ set.\n\n\ @return\ String\ A\ string\ containing\ all\ the\ dominoes\ in\ the\ set\n
+numComments=6

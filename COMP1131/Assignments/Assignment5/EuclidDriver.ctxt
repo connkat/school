@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=EuclidDriver
+comment0.text=\n\ Driver\ class\ to\ test\ the\ Euclid\ implementation.\n\ \n\ @connkat\ (Kat\ Connolly)\n\ @v1.0\ \n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=num1\ num2
+comment2.target=void\ testGCD(int,\ int)
+comment2.text=\n\ Helper\ method\ to\ test\ the\ GCD\ calculation\ and\ print\ the\ result.\n\n\ @param\ num1\ first\ positive\ integer\n\ @param\ num2\ second\ positive\ integer\n\ \n\ @return\ void\n
+numComments=3

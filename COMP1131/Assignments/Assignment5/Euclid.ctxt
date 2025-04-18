@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Euclid
+comment0.text=\n\ Implementation\ of\ Euclid's\ algorithm\ to\ find\ the\n\ greatest\ common\ divisor\ of\ two\ positive\ integers.\n\n\ @connkat\ (Kat\ Connolly)\n\ @v1.0\n
+comment1.params=m\ n
+comment1.target=int\ gcd(int,\ int)
+comment1.text=\n\ Calculates\ the\ greatest\ common\ divisor\ of\ two\ positive\ integers\n\ using\ Euclid's\ algorithm\ recursively.\n\ \n\ @param\ m\ first\ positive\ integer\n\ @param\ n\ second\ positive\ integer\n\ @return\ the\ greatest\ common\ divisor\ of\ m\ and\ n\n
+numComments=2

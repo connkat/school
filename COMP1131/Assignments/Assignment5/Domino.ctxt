@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Domino
+comment0.text=\n\ Represents\ a\ standard\ domino\ tile\ with\ two\ ends,\ each\ having\ 0-6\ pips.\n\n\ @connkat\ (Kat\ Connolly)\n\ @version\ v1.0\n
+comment1.params=e1\ e2
+comment1.target=Domino(int,\ int)
+comment1.text=\n\ Constructs\ a\ domino\ with\ the\ specified\ values\ for\ each\ end.\n\ @param\ e1\ Value\ for\ end\ 1\ (0-6)\n\ @param\ e2\ Value\ for\ end\ 2\ (0-6)\n\ \n\ @return\ Domino\n
+comment2.params=
+comment2.target=int\ getEnd1()
+comment2.text=\n\ Returns\ the\ value\ of\ end1\n\n\ @return\ int\ Value\ of\ end1\n
+comment3.params=
+comment3.target=int\ getEnd2()
+comment3.text=\n\ Returns\ the\ value\ of\ end2\n\n\ @return\ int\ Value\ of\ end2\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ Returns\ a\ string\ representation\ of\ the\ domino\ tile.\n\ The\ larger\ value\ is\ listed\ last,if\ both\ ends\ have\ the\ same\ value,\ \n\ it's\ called\ a\ "Double".\n\ \n\ @return\ String\ A\ representation\ of\ the\ domino\n
+numComments=5
