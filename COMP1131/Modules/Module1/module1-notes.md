@@ -22,7 +22,7 @@
 - You will encounter three kinds of errors as you develop programs:
 	• compile-time error: Any error identified by the compiler is called a compile-time error. When a compile-time error occurs, an executable version of the program is not created.
 	• runtime error: The second kind of problem occurs during program execution. It is called a runtime error and causes the program to terminate abnormally.
-	• logical error:  In this case, the soft- ware compiles and executes without complaint, but it produces incorrect results.
+	• logical error:  In this case, the software compiles and executes without complaint, but it produces incorrect results.
 
 There are four programming language levels
 - machine language
@@ -42,7 +42,7 @@ There are four programming language levels
 Object-oriented programming ultimately requires a solid understanding of the following terms:
 	• object: An object is a fundamental element in a program. A software object often represents a real object in our problem domain, such as a bank account.
 	• attribute: An object’s attributes are the values it stores internally, which may be represented as primitive data or as other objects. For example, a bank account object may store a floating point number (a primitive value) that represents the balance of the account. It may contain other attributes, such as the name of the account owner. Collectively, the values of an object’s attributes define its current state.
-	• method: a method is a group of programming statements that is given a name. When a method is invoked, its statements are executed. A set of methods is associated with an object. The meth- ods of an object define its potential behaviors.
+	• method: a method is a group of programming statements that is given a name. When a method is invoked, its statements are executed. A set of methods is associated with an object. The methods of an object define its potential behaviors.
 	• class: An object is defined by a class. A class is the model or blueprint from which an object is created. 
 	• encapsulation: An object should be encapsulated, which means it protects and manages its own information. That is, an object should be self-governing. The only changes made to the state of the object should be accomplished by that object’s methods. We should design an object so that other objects cannot “reach in” and change its state.
 	• inheritance: Classes can be created from other classes by using inheritance. That is, the definition of one class can be based on another class that already exists. Inheritance is a form of software reuse, capitalizing on the similarities among various kinds of classes that we may want to create. 
@@ -56,14 +56,10 @@ Other important terms:
 ## ////////////// Course Notes //////////////
 
 ## Compilation
-Each type of CPU executes only a particular machine
-language
-• A program must be translated into machine
-language before it can be executed
-• A compiler is a software tool which translates source
-code into a specific target language
-• Often, that target language is the machine language
-for a particular CPU type
+Each type of CPU executes only a particular machine language
+• A program must be translated into machine language before it can be executed
+• A compiler is a software tool which translates source code into a specific target language
+• Often, that target language is the machine language for a particular CPU type
 • The Java approach is somewhat different: 
 	• The Java compiler translates Java source code into a special representation called bytecode
 	• Java bytecode is not the machine language for any traditional CPU
@@ -102,12 +98,7 @@ for a particular CPU type
 
 ## Development Activities
 - Software requirements specify what a program must accomplish
-- Requirements are expressed in a document called a
-functional specification
-- A software design indicates how a program will
-accomplish its requirements
-- Implementation is the process of writing the source
-code that will solve the problem
-- Testing is the act of ensuring that a program will
-solve the intended problem given all of the
-constraints under which it must perform
+- Requirements are expressed in a document called a functional specification
+- A software design indicates how a program will accomplish its requirements
+- Implementation is the process of writing the source code that will solve the problem
+- Testing is the act of ensuring that a program will solve the intended problem given all of the constraints under which it must perform

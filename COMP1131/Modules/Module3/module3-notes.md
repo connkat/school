@@ -6,7 +6,7 @@
 
  - In Java, a variable name represents either a primitive value or an object. Like variables that hold primitive types, a variable that refers to an object must be declared. The class used to define an object can be thought of as the type of an object. The declarations of object variables are similar in structure to the declarations of primitive variables.
 
-- Compliers will issue an error if you attempt to use a var before initializing it. 
+- Compilers will issue an error if you attempt to use a var before initializing it. 
 - An object var can be set to `null`, which specifically indicates that a var does not refer to an object.
 - You need to instantiate an object by using the `new` operator: 
 
@@ -69,7 +69,7 @@ that contains the number formatted in the appropriate manner.
      - EX: System.out.printf("ID: %5d\tName: %s", id, name);
 
 ### Enumerated types
-- An enumerated type establishes all pos- sible values of a variable of that type by listing, or enumerating, them.
+- An enumerated type establishes all possible values of a variable of that type by listing, or enumerating, them.
 - EX: enum Season {winter, spring, summer, fall}
 	 time = Season.spring;
 - An enumerated type is a special kind of class, and the variables of an enumerated type are object variables. Thus there are a few methods associated with all enumerated types. The ordinal method returns the numeric value associated with a particular enumerated type value. The name method returns the name of the value, which is the same as the identifier that defines the value.

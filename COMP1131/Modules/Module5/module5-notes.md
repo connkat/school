@@ -2,16 +2,16 @@
 
 ## Classes and Objects
 - A class is a blueprint of an object, the class represents the concept of an object. Any object created from that class is a realization of that concept. 
-	- EX: class student represents a student at a university, and every object created fro, that class represents and actual student attending the school. We'd end up with one class and multiple Student objects. 
+	- EX: class student represents a student at a university, and every object created from that class represents and actual student attending the school. We'd end up with one class and multiple Student objects. 
 - State is defined by the values of the attributes associated with that object. 
 	- EX: Student attributes might include `name`, `address`, `major`, etc. 
 - In Java, an objects attributes are defined by variables declared within a class. 
-- The object also has behaviours, which are defined by operations associated with that object. 
+- The object also has behaviors, which are defined by operations associated with that object. 
 	- EX: How GPA is calculated, how to update the address
 - These operations can be executed by or on a particular student object. In Java, an object's operations are defined by methods within a class. 
 
 ### Identifying Classes and Objects
-- Objects are generally nouns (but not 100% of the time). WHen you are talking about nouns (plural), you should consider creating a class. 
+- Objects are generally nouns (but not 100% of the time). When you are talking about nouns (plural), you should consider creating a class. 
 - Another key decision is whether to represent something as an object or as a primitive attribute of another object. 
 	- EX: Salary might be represented as an `int`, but there are scenarios where a salary falls within a range depending on things like performance and title. This could be better represented as a separate class if it is more complex. 
 
@@ -48,9 +48,7 @@ accomplish must be represented somewhere in the behaviors of the classes. That i
 - We should make it difficult, if not impossible, for code outside of a class to “reach in” and change the value of a variable that is declared inside that class.
 - An object should be encapsulated from the rest of the system. It should interact with other parts of a program only through the specific set of methods that define the services that that object provides. These methods define the interface between that object and other objects that use it.
 - The code that uses an object, which is sometimes called the client of an object, should not be allowed to access variables directly. The client should call an object’s methods, and those methods then interact with the data encapsulated within the object. [See encapsulation img](./enapsulation.png).
-- Modifiers: In Java, we accomplish object encapsulation using `modifiers`. A modifier is a
-Java reserved word that is used to specify particular characteristics of a program-
-ming language construct.
+- Modifiers: In Java, we accomplish object encapsulation using `modifiers`. A modifier is a Java reserved word that is used to specify particular characteristics of a programming language construct.
 	- EX: `final`, which is used to declare a constant. 
 - Java has several modifiers that can be used in various
 ways. Some modifiers can be used together, but some combinations are invalid.
@@ -119,8 +117,7 @@ public Account(String owner, long account, double initial)
 ### Local Data
 - The scope of a variable or constant is the part of a program in which a valid reference to that variable can be made.
 - A `local variable` simply does not exist outside the method in which it is declared.
-- `Instance data`, declared at the class level, have a
-scope of the entire class; any method of the class can refer to instance data.
+- `Instance data`, declared at the class level, have a scope of the entire class; any method of the class can refer to instance data.
 - Because local data and instance data operate at different levels of scope, it’s possible to declare a local variable inside a method with the same name as an instance variable declared at the class level.
 - Referring to that name in the method will reference the local version of the variable. This naming practice obviously has the potential to confuse anyone reading the code, so it should be avoided.
 - The formal parameter names in a method header serve as local data for that method. They don’t exist until the method is called, and they cease to exist when the method is exited.
@@ -138,8 +135,7 @@ the constructor in the Account class is Account.
 
 ## Static Class Members
 - A static method is one that is invoked through its class name, instead of through an object of that class.
-- Not only can methods be static, but variables can be static as well. We declare
-static class members using the `static` modifier
+- Not only can methods be static, but variables can be static as well. We declare static class members using the `static` modifier
 - EX: all the methods of the `Math` class are static.
 
 ### Status Variables
@@ -160,7 +156,7 @@ using the static modifier. Because the value of constants cannot be changed, the
 	- The methods in the Math class perform basic computations based on values passed as parameters. There is no object state to maintain in these situations, so there is no good reason to force us to create an object in order to request these services. 
 - A method is made static by using the `static` modifier in the method declaration. As we’ve seen many times, the `main` method of a Java program is declared with the `static modifier`; this is done so that main can be executed by the interpreter without instantiating an object from the class that contains `main`.
 - Because static methods do not operate in the context of a particular object, they cannot reference instance variables, which exist only in an instance of a class.
-	- The compiler will issue an error if a static method attempts to use a non- static variable. A static method can, however, reference static variables, because static variables exist independent of specific objects. Therefore, all static methods, including the `main` method, can access only static or local variables.
+	- The compiler will issue an error if a static method attempts to use a non-static variable. A static method can, however, reference static variables, because static variables exist independent of specific objects. Therefore, all static methods, including the `main` method, can access only static or local variables.
 	- EX: confused? Go to pg. 203: The getCount method could have been declared without the static modifier, but then its invocation in the main method would have had to be done through an instance of the Slogan class instead of the class itself.
 
 ## Class Relationships
@@ -238,7 +234,7 @@ if (this.position == piece2.position)
 - The compiler must still be able to associate each invocation with a specific method declaration. If the method name for two or more methods is the same, additional information is used to uniquely identify the version that is being invoked. 
 	- In Java, a method name
 can be used for multiple methods as long as the number of parameters, the types of those parameters, and/or the order of the types of parameters is distinct. 
-- EX: we could declare a method called sum and then  declare another method called sum, within the same class, as follows:
+- EX: we could declare a method called sum and then declare another method called sum, within the same class, as follows:
 
 ```java
 public int sum(int num1, int num2)
@@ -259,8 +255,7 @@ sum(25, 69, 13);
 
 - A method’s name, along with the number, type, and order of its parameters, is called the method’s signature. The compiler uses the complete method signature to bind a method invocation to the appropriate definition.
 - The compiler must be able to examine a method invocation to determine which specific method is being invoked. If you attempt to specify two method names with the same signature, the compiler will issue an appropriate error message and will not create an executable program. There can be no ambiguity.
-- Note that the return type of a method is not part of the method signature. That
-is, two overloaded methods cannot differ only by their return type. 
+- Note that the return type of a method is not part of the method signature. That is, two overloaded methods cannot differ only by their return type. 
 	- This is because the value returned by a method can be ignored by the invocation. The compiler would not be able to tell which version of an overloaded method was being referenced in such situations.
 - Constructors can be overloaded, and they often are. By providing multiple versions of a constructor, we provide multiple ways to set up an object.
 
@@ -277,8 +272,7 @@ technique is called `regression testing`.
 ### Reviews
 - One technique used to evaluate design or code is called a review, which is a meeting in which several people carefully examine a design document or section of
 code. 
-- A design review should determine whether the requirements are addressed. It
-should also assess the way the system is decomposed into classes and objects. 
+- A design review should determine whether the requirements are addressed. It should also assess the way the system is decomposed into classes and objects. 
 - A code review should determine how faithfully the design satisfies the requirements and how faithfully the implementation represents the design. It should identify any specific problems that would cause the design or the implementation to fail in its responsibilities.
 
 ### Defect Testing
@@ -317,8 +311,7 @@ of the source code that their applications use.
 ## Debugging
 -  Debugging is the act of locating and correcting run-time and logic errors in your programs.
 -  A debugger is a software application that allows us to observe these inner workings as the program executes. 
-- One of the most simplistic approaches to debugging involves the use of print-
-ing. That is, scattered throughout a program can be `print` and `println` statements that output various information either to the screen or to an output file.
+- One of the most simplistic approaches to debugging involves the use of printing. That is, scattered throughout a program can be `print` and `println` statements that output various information either to the screen or to an output file.
 
 ### Debugging Concepts
 - Debugging through printing can take us only so far. Most of the time, this style of debugging can be effectively used to identify what is happening during execution, or the value of a variable at a certain point in the program. 

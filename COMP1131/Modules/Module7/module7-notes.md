@@ -56,14 +56,11 @@ problem `(N = 1)` works is that factorial is defined only for positive integers.
         = 20 + 19 + 18 + ... + 2 + 1
         = 210
 			```
-- In Java, as in many other programming languages, a method can call itself.
-Each call to the method creates a new environment in which to work. That is, all local variables and parameters are newly defined with their own unique data space every time the method is called. Each parameter is given an initial value based on the new call.
-- Each time a method terminates, processing returns to the method
-that called it (which may be an earlier invocation of the same method). These rules are no different from those governing any “regular” method invocation.
-- A recursive solution to the summation problem is defined by the following re-
-cursive method called `sum`:
-	```java
+- In Java, as in many other programming languages, a method can call itself. Each call to the method creates a new environment in which to work. That is, all local variables and parameters are newly defined with their own unique data space every time the method is called. Each parameter is given an initial value based on the new call.
+- Each time a method terminates, processing returns to the method that called it (which may be an earlier invocation of the same method). These rules are no different from those governing any “regular” method invocation.
+- A recursive solution to the summation problem is defined by the following recursive method called `sum`:
 	// This method returns the sum of 1 to num
+```java
 public int sum(int num)
 {
 	int result;
@@ -73,7 +70,7 @@ public int sum(int num)
 		result = num + sum(num-1);
 	return result;
 }
-	```
+```
 - Note that this method essentially embodies our recursive definition that the sum of the numbers between 1 and N is equal to N plus the sum of the numbers between 1 and N–1. The sum method is recursive because sum calls itself. The parameter passed to sum is decremented each time sum is called, until it reaches the base case of 1.
 - Recursive methods usually contain an if-else statement, with one of the branches representing the base case.
 	- Calling a method within itself with a different parameter value:
@@ -98,8 +95,7 @@ public int sum(int num)
 - Each return value contributes to the computation of the sum at the higher level. Without the base case, infinite recursion would result. Because each call to a method requires additional memory space, infinite recursion often results in a run-time error indicating that memory has been exhausted.
 
 ### Recursion vs Iteration
-- Recursion is the most elegant and appropriate way to solve some
-problems, but for others it is less intuitive than an iterative solution.
+- Recursion is the most elegant and appropriate way to solve some problems, but for others it is less intuitive than an iterative solution.
 - Of course, there is an iterative solution to the summation problem we just explored:
 	```java
 	sum = 0;
@@ -112,7 +108,7 @@ problems, but for others it is less intuitive than an iterative solution.
 ## Direct vs Indirect Recursion
 - Direct recursion occurs when a method invokes itself, such as when sum calls sum. 
 - Indirect recursion occurs when a method invokes another method, eventually resulting in the original method being invoked again.
-- EX: if method `m1` invokes method `m`2, and `m2` invokes method `m1`, we can say that `m1` is indirectly recursive. 
+- EX: if method `m1` invokes method `m2`, and `m2` invokes method `m1`, we can say that `m1` is indirectly recursive. 
 	- The amount of indirection could be several levels deep, as when `m1` invokes `m2`, which invokes `m3`, which invokes `m4`, which invokes `m1`.
 - Indirect recursion requires paying just as much same attention to base cases as direct recursion does. Furthermore, indirect recursion can be more difficult to trace because of the intervening method calls. Therefore, extra care is warranted when designing or evaluating indirectly recursive methods. Ensure that the indirection is truly necessary and that it is clearly explained in documentation.
 
@@ -381,12 +377,10 @@ configuration. Although there may be many paths through the maze, the recursion
 terminates when a path is found. 
 
 ### The Towers of Hanoi
-- The Towers of Hanoi puzzle was invented in the 1880s by Edouard Lucas, a
-French mathematician. It has become a favorite among computer scientists be-
+- The Towers of Hanoi puzzle was invented in the 1880s by Edouard Lucas, a French mathematician. It has become a favorite among computer scientists be-
 cause its solution is an excellent demonstration of recursive elegance.
 - The puzzle consists of three upright pegs (towers) and a set of disks with holes in the middle so that they slide onto the pegs. Each disk has a different diameter. Initially, all of the disks are stacked on one peg in order of size such that the largest disk is on the bottom, as shown [here](Modules/Module7/towers-of-hanoi.png) (and the solution [here](Modules/Module7/towers-solution.png))
-- These rules imply that we must move smaller disks “out of the way” in order
-to move a larger disk from one peg to another. To move all three disks from the first peg to the third peg, we first have to get to the point where the smaller two disks are out of the way on the second peg so that the largest disk can be moved from the first peg to the third peg.
+- These rules imply that we must move smaller disks “out of the way” in order to move a larger disk from one peg to another. To move all three disks from the first peg to the third peg, we first have to get to the point where the smaller two disks are out of the way on the second peg so that the largest disk can be moved from the first peg to the third peg.
 - The last three moves put the smaller disks in their final place on top of the largest one. Let’s use this idea to form a general strategy. To move a stack of N disks from the original peg to the destination peg:
 	- Move the topmost N–1 disks from the original peg to the extra peg.
 	- Move the largest disk from the original peg to the destination peg.

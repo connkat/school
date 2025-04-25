@@ -69,7 +69,7 @@ A variable can store only one value of its declared type. A new value overwrites
       System.out.println("A heptagon has " + sides + " sides.");
       sides = 10; // assignment statement
       System.out.println("A decagon has " + sides + " sides.");
-sides = 12;
+      sides = 12;
       System.out.println("A dodecagon has " + sides + " sides.");
    }
 ```
@@ -96,11 +96,11 @@ Floating Point Data Types:
 
 [img](COMP1131/Moduel2/numeric-primitive-types.png)
 
-- Note that even though a float value supports very large (and very small) num- bers, it has only seven significant digits. Therefore, if it is important to maintain a value such as 50341.2077 accurately, we need to use a double.
-- As we’ve already discussed, a literal is an explicit data value used in a pro- gram. The various numbers used in programs such as Facts and Addition and PianoKeys are all integer literals. Java assumes that all integer literals are of type int, unless an L or l is appended to the end of the value to indicate that it should be considered a literal of type long, such as 45L.
-- Likewise, Java assumes that all floating point literals are of type double. If we need to treat a floating point literal as a float, we append an F or f to the end of the value, as in 2.718F or 123.45f. Numeric literals of type double can be fol- lowed by a D or d if desired.
+- Note that even though a float value supports very large (and very small) numbers, it has only seven significant digits. Therefore, if it is important to maintain a value such as 50341.2077 accurately, we need to use a double.
+- As we’ve already discussed, a literal is an explicit data value used in a program. The various numbers used in programs such as Facts and Addition and PianoKeys are all integer literals. Java assumes that all integer literals are of type int, unless an L or l is appended to the end of the value to indicate that it should be considered a literal of type long, such as 45L.
+- Likewise, Java assumes that all floating point literals are of type double. If we need to treat a floating point literal as a float, we append an F or f to the end of the value, as in 2.718F or 123.45f. Numeric literals of type double can be followed by a D or d if desired.
 
-- An integer literal is composed of a series of digits followed by an op- tional suffix to indicate that it should be considered a long integer. Negation of a literal is considered a separate operation.
+- An integer literal is composed of a series of digits followed by an optional suffix to indicate that it should be considered a long integer. Negation of a literal is considered a separate operation.
 Examples:
        5
        2594
@@ -112,8 +112,8 @@ You know this
 ### Expressions
 - An expression is a combination of one or more operators and operands that usually performs a calculation. The value calculated does not have to be a number, but often it is.
 
--Arithmetic Operators: 
-The usual arithmetic operations are defined for both integer and floating point numeric types, including addition (+), subtraction (–), multiplication (*), and di- vision (/). Java also has another arithmetic operation: The remainder operator (%) returns the remainder after dividing the second operand into the first. The remainder operator is sometimes called the modulus operator. 
+#  Arithmetic Operators: 
+The usual arithmetic operations are defined for both integer and floating point numeric types, including addition (+), subtraction (–), multiplication (*), and division (/). Java also has another arithmetic operation: The remainder operator (%) returns the remainder after dividing the second operand into the first. The remainder operator is sometimes called the modulus operator. 
 
 - As you might expect, if either or both operands to any numeric operator are floating point values, the result is a floating point value. However, the division operator (/) produces results that are less intuitive, depending on the types of the operands. If both operands are integers, the / operator performs integer division, meaning that any fractional part of the result is discarded.
 If one or the other or both operands are floating point values, the / operator performs floating point division, and the fractional part of the result is kept. 
@@ -148,5 +148,3 @@ public class Echo
 }
 ```
 
-
-## ////////////// Class notes //////////////

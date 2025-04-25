@@ -40,8 +40,7 @@ public class BasicArray
 ### Bounds Checking
 - Bounds checking ensures that an index used to refer to an array element is in range
 - The index operator performs automatic bounds checking, which ensures that the index is in range for the array being referenced. Whenever a reference to an array element is made, the index must be greater than or equal to zero and less than the size of the array. 
-- One way to check for the bounds of an array is to use the length constant,
-which is an attribute of the array object and holds the size of the array. It is a public constant and therefore can be referenced directly.
+- One way to check for the bounds of an array is to use the length constant, which is an attribute of the array object and holds the size of the array. It is a public constant and therefore can be referenced directly.
 
 ### Alternative Array Syntax
 - Syntactically, there are two ways to declare an array reference in Java.  
@@ -163,7 +162,7 @@ Java provides a way to define methods that accept variable-length parameter list
 - As with one-dimensional arrays, an initializer list can be used to instantiate a two-dimensional array, where each element is itself an array initializer list.
 
 ### Multidimensional Arrays
-- Using an array with more than two dimensions is rare in an object- oriented system.
+- Using an array with more than two dimensions is rare in an object-oriented system.
 - An array can have one, two, three, or even more dimensions. Any array with more than one dimension is called a multidimensional array.
 - It’s fairly easy to picture a two-dimensional array as a table. A three-dimensional array could be drawn as a cube. However, once you are past three dimensions, multidimensional arrays might seem hard to visualize. But consider that each subsequent dimension is simply a subdivision of the previous one. It is often best to think of larger multidimensional arrays in this way.
 	- EX: suppose we wanted to store the number of students attending universities across the United States, broken down in a meaningful way. We might represent it as a four-dimensional array of integers. The first dimension represents the state. The second dimension represents the universities in each state. The third dimension represents the colleges in each university. Finally, the fourth dimension represents the departments in each college. The value stored at each location is the number of students in one particular department.

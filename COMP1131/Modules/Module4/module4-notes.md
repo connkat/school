@@ -13,7 +13,7 @@
 	if (count > 20)
       System.out.println("Count exceeded");
 	  ```
-- A loop, or repetition statement, allows us to execute a program- ming statement over and over again. Like a conditional, a loop is based on a boolean expression that determines how many times the statement is executed.
+- A loop, or repetition statement, allows us to execute a programming statement over and over again. Like a conditional, a loop is based on a boolean expression that determines how many times the statement is executed.
 - Java has three types of loop statements: the `while` statement, the `do` statement, and the `for` statement. Each type of loop statement has unique characteristics that distinguish it from the others.
 - All conditionals and loops are based on boolean expressions, which use equality operators, relational operators, and logical operators to make decisions. Before we discuss the details of conditional and loop statements, let’s explore these operators.
 - Equality and Relational Operators: 
@@ -27,12 +27,12 @@
       System.out.println("total does NOT equal sum");
 	  ```
 - Logical Operators: 
-	- In addition to the equality and relational operators, Java has three logical opera- tors that produce boolean results. They also take boolean operands.
+	- In addition to the equality and relational operators, Java has three logical operators that produce boolean results. They also take boolean operands.
 		- `!`: logical NOT
 		- `&&`: logical AND
 		- `||`: logical OR 
 	- An important characteristic of the && and || operators is that they are “short-circuited” in Java. That is, if their left operand is sufficient to decide the boolean result of the operation, the right operand is not evaluated. 
-	- You should consider carefully whether or not to rely on these kinds of subtle programming language characteristics. Not all programming languages short- circuit these operations, and such code would produce a divide-by-zero error in those languages. 
+	- You should consider carefully whether or not to rely on these kinds of subtle programming language characteristics. Not all programming languages short-circuit these operations, and such code would produce a divide-by-zero error in those languages. 
 
 ### The `if` Statement 
 - An `if` statement consists of the reserved word if followed by a boolean expression, followed by a statement. The condition is enclosed in parentheses and must evaluate to true or false. 
@@ -44,7 +44,7 @@
 ```java
 	(total > MAX) ? total + 1 : total * 2;
 ```
-	 - As we’ve seen, the conditional operator is occasionally helpful. However, it is not a replacement for an if-else statement because the operands to the ?: opera- tor are expressions, not necessarily full statements. 
+	 - As we’ve seen, the conditional operator is occasionally helpful. However, it is not a replacement for an if-else statement because the operands to the ?: operator are expressions, not necessarily full statements. 
 - Nested `if` statements: The statement executed as the result of an if statement could be another if statement. This situation is called a nested if. 
 
 ### Comparing data
@@ -111,12 +111,12 @@ System.out.println("Error in Identification Character.");
 ```
 	- First, the expression is evaluated. In this example, the expression is a simple char variable. Execution then transfers to the first statement identified by the case value that matches the result of the expression. Therefore, if idChar contains an 'A', the variable aCount is incremented. If it contains a 'B', the case for 'A' is skipped, and processing continues where bCount is incremented.
 	- If no case value matches that of the expression, execution continues with the optional default case, indicated by the reserved word default. If no default case exists, no statements in the switch statement are executed, and processing continues with the statement after the switch statement. It is often a good idea to include a default case, even if you don’t expect it to be executed.
-	- When a break statement is encountered, processing jumps to the statement fol- lowing the switch statement. A break statement is usually used to break out of each case of a switch statement. 
+	- When a break statement is encountered, processing jumps to the statement following the switch statement. A break statement is usually used to break out of each case of a switch statement. 
 - `Common Error`: Forgetting a break statement at the end of a switch case is a common error. Usually you want each case to be mutually exclusive, so you’ll want to include a break statement at the end of each case. It’s unfortunate that the usual case requires the extra line of code, but occasionally it is convenient to omit it.
 
 ### The `while` Statement
 - A while statement is a loop that evaluates a boolean condition just as an if statement does and executes a statement (called the body of the loop) if the condition is true. 
-- However, unlike the if statement, after the body is executed, the condition is evaluated again. If it is still true, the body is executed again. This repetition continues until the condition becomes false; then process- ing continues with the statement after the body of the while loop.
+- However, unlike the if statement, after the body is executed, the condition is evaluated again. If it is still true, the body is executed again. This repetition continues until the condition becomes false; then processing continues with the statement after the body of the while loop.
 
 - Infinite Loops: It is the programmer’s responsibility to ensure that the condition of a loop will eventually become false. If it doesn’t, the loop body will execute forever, or at least until the program is interrupted. This situation, which is referred to as an infinite loop, is a common mistake.
 	- EX: 
@@ -152,8 +152,8 @@ System.out.println("Error in Identification Character.");
 	}
 	while (!word.equals("quit"));
 	```
-- A do loop begins simply with the reserved word do. The body of the do loop continues until the while clause that contains the boolean condition that deter- mines whether the loop body will be executed again. Sometimes it is difficult to determine whether a line of code that begins with the reserved word while is the beginning of a while loop or the end of a do loop.
-- If you know you want to perform the body of a loop at least once, then you prob- ably want to use a do statement. A do loop has many of the same properties as a while statement, so it must also be checked for termination conditions to avoid infinite loops.
+- A do loop begins simply with the reserved word do. The body of the do loop continues until the while clause that contains the boolean condition that determines whether the loop body will be executed again. Sometimes it is difficult to determine whether a line of code that begins with the reserved word while is the beginning of a while loop or the end of a do loop.
+- If you know you want to perform the body of a loop at least once, then you probably want to use a do statement. A do loop has many of the same properties as a while statement, so it must also be checked for termination conditions to avoid infinite loops.
 
 ### The `for` Statement
 - The while statement and the do statement are good to use when you don’t initially know how many times you want to execute the loop body. The for statement is another repetition statement that is particularly well suited for executing the body of a loop a specific number of times that can be determined before the loop is executed.
