@@ -1,0 +1,28 @@
+#BlueJ class context
+comment0.target=MyBMI
+comment0.text=\n\ MyBMI\ abstract\ class\ serves\ as\ the\ base\ for\ BMI\ calculations\n\ with\ different\ unit\ systems\n\n\ @author\ connkat\ \n\ @version\ 2025.10.27\n
+comment1.params=
+comment1.target=MyBMI()
+comment1.text=\n\ Default\ constructor\n
+comment2.params=name\ weightKg
+comment2.target=MyBMI(java.lang.String,\ double)
+comment2.text=\n\ Parameterized\ constructor\n\ \n\ @param\ name\ the\ person's\ name\ -\ String\n\ @param\ weightKg\ the\ person's\ weight\ in\ kilograms\ -\ double\n
+comment3.params=
+comment3.target=java.lang.Object[]\ getPersonData()
+comment3.text=\n\ Accessor\ Method\ -\ returns\ person\ data\ as\ an\ array\n\ [0]\ \=\ name\ (String),\ [1]\ \=\ weightKg\ (double)\n\ \n\ @return\ Object\ array\ containing\ name\ and\ weight\ -\ {String,\ double}\n
+comment4.params=name\ weightKg
+comment4.target=void\ setPersonData(java.lang.String,\ double)
+comment4.text=\n\ Mutator\ Method\ -\ sets\ both\ name\ and\ weight\n\ \n\ @param\ name\ the\ person's\ name\ -\ String\n\ @param\ weightKg\ the\ person's\ weight\ in\ kilograms\ -\ double\n\ @return\ void\n
+comment5.params=
+comment5.target=double\ getHeightInMeters()
+comment5.text=\n\ Abstract\ method\ to\ get\ height\ in\ meters\ -\ must\ be\ implemented\ by\ subclasses\n\ \n\ @return\ height\ in\ meters\ double\n
+comment6.params=
+comment6.target=double\ calculateBMI()
+comment6.text=\n\ Calculate\ BMI\ using\ weight\ in\ kg\ and\ height\ in\ meters\ -\ double\n\ \n\ @return\ BMI\ value\ -\ double\n
+comment7.params=
+comment7.target=java.lang.String\ analyzeBMI()
+comment7.text=\n\ Analyze\ BMI\ to\ determine\ category\n\ \n\ @return\ BMI\ category\ analysis\ -\ String\n
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment8.text=\n\ Returns\ string\ representation\ of\ MyBMI\ object\n\ \n\ @return\ string\ with\ name,\ weight,\ BMI,\ and\ analysis\n
+numComments=9

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=MetricUnit
+comment0.text=\n\ MetricUnit\ handles\ BMI\ calculation\ using\ metric\ units\n\n\ @author\ connkat\ \n\ @version\ 2025.10.27\n
+comment1.params=
+comment1.target=MetricUnit()
+comment1.text=\n\ Default\ constructor\n
+comment2.params=name\ weightKg\ heightCm
+comment2.target=MetricUnit(java.lang.String,\ double,\ double)
+comment2.text=\n\ Parameterized\ constructor\n\ \n\ @param\ name\ the\ person's\ name\n\ @param\ weightKg\ the\ person's\ weight\ in\ kilograms\n\ @param\ heightCm\ height\ in\ centimeters\n
+comment3.params=
+comment3.target=double\ getHeightCm()
+comment3.text=\ \n\ Accessor\ method\ -\ get\ height\ of\ person\n\ \n\ @return\ heightCm\ -\ double\n
+comment4.params=heightCm
+comment4.target=void\ setHeightCm(double)
+comment4.text=\ \n\ Mutator\ method\ -\ set\ height\ of\ person\n\ \n\ @param\ heightCm\ the\ person's\ height\ in\ CM\ -\ double\n\ @return\ void\n
+comment5.params=
+comment5.target=double\ getHeightInMeters()
+comment5.text=\n\ Convert\ height\ from\ centimeters\ to\ meters\n\ \n\ @return\ height\ in\ meters\ -\ double\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\n\ Returns\ string\ representation\ of\ MetricUnit\ object\n\ \n\ @return\ string\ with\ all\ details\ including\ metric\ measurements\ -\ String\n
+numComments=7

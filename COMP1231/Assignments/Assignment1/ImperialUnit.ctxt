@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=ImperialUnit
+comment0.text=\n\ ImperialUnit\ handles\ BMI\ calculation\ using\ imperial\ units\n\n\ @author\ connkat\ \n\ @version\ 2025.10.27\n
+comment1.params=
+comment1.target=ImperialUnit()
+comment1.text=\n\ Default\ constructor\n
+comment2.params=name\ weightKg\ heightFeet\ heightInches
+comment2.target=ImperialUnit(java.lang.String,\ double,\ double,\ double)
+comment2.text=\ \n\ Parameterized\ constructor\n\ \n\ @param\ name\ the\ person's\ name\ -\ String\n\ @param\ weightKg\ the\ person's\ weight\ in\ kilograms\ -\ double\n\ @param\ heightFeet\ height\ in\ feet\ -\ double\n\ @param\ heightInches\ height\ in\ inches\ -\ double\n
+comment3.params=
+comment3.target=double[]\ getHeight()
+comment3.text=\ \n\ Accessor\ method\ -\ get\ height\ of\ person\n\ \n\ @return\ height\ -\ double\n
+comment4.params=heightFeet\ heightInches
+comment4.target=void\ setHeight(double,\ double)
+comment4.text=\ \n\ Mutator\ method\ -\ set\ height\ of\ person\n\ \n\ @param\ heightFeet\ the\ person's\ height\ in\ feet\ -\ double\n\ @param\ heightInches\ the\ person's\ heigh\ in\ inches\ -\ double\n\ @return\ void\n
+comment5.params=
+comment5.target=double\ getHeightInMeters()
+comment5.text=\n\ Convert\ imperial\ height\ to\ meters\n\ 1\ inch\ \=\ 2.54\ cm,\ 1\ foot\ \=\ 12\ inches\n\ \n\ @return\ height\ in\ meters\ -\ Double\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\n\ Returns\ string\ representation\ of\ ImperialUnit\ object\n\ \n\ @return\ string\ with\ all\ details\ including\ imperial\ measurements\ -\ String\n
+numComments=7
